@@ -97,6 +97,9 @@ ul{
 .flexwrap{
     flex-wrap: wrap;
 }
+span {
+  white-space: pre-wrap;
+}
 /*layout*/
 .container{
     width: 68.5625rem;
@@ -107,7 +110,14 @@ ul{
   display: flex;
   justify-content: center;
 }
+
+.navtop{
+  padding: 0 0 0 25%;
+  background-color: var(--Dunklegrey);
+  width: 2526px;
+}
 .navitems{
+  max-width: 1360px;
   border-width: 10px;
   border-color: yellow;
 }
@@ -138,13 +148,27 @@ h3{
 }
 /*Useful*/
 .useful{
-  padding: 2.1875rem 3.75rem 2.1875rem 3.75rem;
-  margin: 0 0 20px 20px;
+  padding: 35px 60px 35px 60px;
+  margin: 0 0 20px 20px;  
   background-color: var(--limeTeal);
   font-size: 1.875rem;
   width: 433px;
+  white-space: pre-line;
+  overflow: hidden;
   
   
+}
+.usefulbox{ 
+  margin: 0px,0px,0px,0px ;
+  padding: 1px;
+  justify-content: center;
+  flex-wrap: nowrap;
+  max-width: 110rem;
+  
+} 
+.useful ul li{
+  list-style: none;
+  flex: 0 0 33.333333%
 }
 /* buttons black->pink */
 .btnblck2:hover{
@@ -189,8 +213,10 @@ h3{
 .h3{
   font-size: 2.1875rem;
 }
-.newsletter {
-  background:url(images/squiggle.png);
+.newsletter{
+  padding: 0 0 0 35%;
+ width: 80rem;
+  background-image: url("squiggle.png");
 }
 .NewsNav{
   overflow: hidden;
@@ -214,3 +240,21 @@ width: 100%;
 .pink{
   color: var(--popularpink);
 }
+.radio{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.radionew{
+
+position: absolute;
+top: 0;
+left: 0;
+height: 25px;
+width: 25px;
+background-color: #f9f000;
+border-radius: 50%;
+
+}
+.radionew:hover input ~ .checkmark {
+  background-color: #ccc;
